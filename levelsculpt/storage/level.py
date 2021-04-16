@@ -1,13 +1,12 @@
 from copy import copy, deepcopy
 
-from levelsculpt.config import *
+from levelsculpt.common.misc import *
+from levelsculpt.storage import Block, BlockType, BlockSet
 
 class Level:
     # Call with no args and you get the default level
-    def __init__(self, name=None, index=None,
-        background=DEFAULT_LEVEL_BACKGROUND,
-        blockset=DEFAULT_BLOCKSET, blocks=[]):
-
+    def __init__(self, name:str, index:int,
+        background:str, blockset:BlockSet, blocks:list):
         self.name = name
         self.index = index
         self.background = background

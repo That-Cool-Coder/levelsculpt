@@ -7,7 +7,7 @@ class Vector2:
         self.y = y
     
     def __copy__(self):
-        return Vector2(self.x, self.x)
+        return Vector2(self.x, self.y)
         
     def __deepcopy__(self, memo):
         return self.__copy__()
@@ -18,7 +18,7 @@ class Vector2:
     def __add__(self, other):
         return Vector2(self.x + other.x, self.y + other.y)
     
-    def __add__(self, other):
+    def __sub__(self, other):
         return Vector2(self.x - other.x, self.y - other.y)
     
     def __mul__(self, scalar):

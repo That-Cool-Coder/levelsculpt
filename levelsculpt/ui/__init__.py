@@ -1,2 +1,2 @@
-from .editorviewport import EditorViewport
+from .worldviewport import WorldViewport
 from .application import Application
