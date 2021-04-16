@@ -1,4 +1,4 @@
-from levelsculptr import Application
+from levelsculpt.ui import Application
 
 if __name__ == '__main__':
     app = Application()

@@ -1,7 +1,8 @@
 import tkinter as tk
 import os
 
-from levelsculptr.config import *
+from levelsculpt.config import *
+from levelsculpt.ui import EditorViewport
 
 class Application:
     def __init__(self):
@@ -13,6 +14,8 @@ class Application:
 
         photo = tk.PhotoImage(file=os.path.join(self.scriptDir, ICON_PATH))
         self.root.iconphoto(True, photo)
+
+        self.editorViewport = EditorViewport(self.root)
     
     def mainloop(self):
         self.root.mainloop()
