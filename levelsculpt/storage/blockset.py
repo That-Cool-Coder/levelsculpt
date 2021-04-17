@@ -17,6 +17,9 @@ class BlockSet:
             return self.blockTypes[typeName]
         except IndexError:
             return None
+        
+    def getBlockTypeNames(self):
+        return list(self.blockTypes.keys())
 
     def addBlockType(self, blockType:BlockType):
         self.blockTypes[blockType.name] = deepcopy(blockType)
